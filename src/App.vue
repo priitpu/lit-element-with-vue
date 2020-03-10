@@ -1,32 +1,38 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div>
+    <t-input v-model="input" @input="handleChange"></t-input>
+    <t-button @click="addElement">Hello</t-button>
+    <div v-for="element in elementsArray" :key="JSON.stringify(element)">
+      {{element}}
     </div>
-    <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 
-#nav {
-  padding: 30px;
+@Component
+export default class HelloWorld extends Vue {
+  public input: string | null = '';
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  public elementsArray: string[] = [];
 
-    &.router-link-exact-active {
-      color: #42b983;
+  public handleChange(e: Event) {
+    const { value } = e.target as HTMLInputElement;
+    this.input = value;
+  }
+
+  public addElement() {
+    if (!this.input) {
+      return;
     }
+    this.elementsArray = [...this.elementsArray, this.input];
+    this.input = null;
   }
 }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+
 </style>
