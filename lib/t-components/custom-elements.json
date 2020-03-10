@@ -1,0 +1,128 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "t-button",
+      "path": "./src/elements/t-button/t-button.ts",
+      "attributes": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "iconLeft",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconRight",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconOnly",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "attribute": "theme",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "iconLeft",
+          "attribute": "iconLeft",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconRight",
+          "attribute": "iconRight",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconOnly",
+          "attribute": "iconOnly",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "t-input",
+      "path": "./src/elements/t-input/t-input.ts",
+      "attributes": [
+        {
+          "name": "size",
+          "type": "string",
+          "default": "\"md\""
+        },
+        {
+          "name": "inputValue",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string",
+          "default": "\"md\""
+        },
+        {
+          "name": "inputValue",
+          "attribute": "inputValue",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "t-icon",
+      "path": "./src/elements/t-icon/t-icon.ts",
+      "attributes": [
+        {
+          "name": "glyph",
+          "type": "string",
+          "default": "\"info\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "glyph",
+          "attribute": "glyph",
+          "type": "string",
+          "default": "\"info\""
+        }
+      ]
+    }
+  ]
+}
