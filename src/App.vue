@@ -4,6 +4,7 @@
     <t-input v-model="input" @keydown.enter="addElement" @input="handleChange"></t-input>
     <t-button @click="addElement">Lisa</t-button>
     <t-button theme="link" @click="clearElements">Tühjenda</t-button>
+    <t-toggle></t-toggle>
     <div v-for="element in elementsArray" :key="JSON.stringify(element)">
       {{element}}
     </div>
