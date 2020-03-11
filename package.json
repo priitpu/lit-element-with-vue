@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "yass": "git subtree pull --prefix lib/t-components https://github.com/priitpu/lit-element-web-components.git master --squash"
   },
   "dependencies": {
     "core-js": "^3.6.4",
