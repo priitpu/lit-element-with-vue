@@ -1,8 +1,12 @@
 <template>
   <div>
     <h1>VUE + WEB COMPONENTS</h1>
-    <t-input v-model="input" @input="handleChange"></t-input>
+    <t-input v-model="input" @keydown.enter="addElement" @input="handleChange"></t-input>
     <t-button @click="addElement">Lisa</t-button>
+    <t-button theme="link" @click="clearElements">Tühjenda</t-button>
+    <div v-for="element in elementsArray" :key="JSON.stringify(element)">
+      {{element}}
+    </div>
   </div>
 </template>
 
@@ -25,7 +29,11 @@ export default class HelloWorld extends Vue {
       return;
     }
     this.elementsArray = [...this.elementsArray, this.input];
-    this.input = null;
+    this.input = '';
+  }
+
+  public clearElements() {
+    this.elementsArray = [];
   }
 }
 </script>
