@@ -3,10 +3,6 @@
     <h1>VUE + WEB COMPONENTS</h1>
     <t-input v-model="input" @input="handleChange"></t-input>
     <t-button @click="addElement">Lisa</t-button>
-    <t-toggle @click="toggleSomething"></t-toggle>
-    <div v-for="element in elementsArray" :key="JSON.stringify(element)">
-      {{element}}
-    </div>
   </div>
 </template>
 
