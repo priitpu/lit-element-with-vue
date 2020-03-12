@@ -8,17 +8,21 @@
             <t-grid>
               <t-grid-row>
                 <t-grid-cell span="6">
-                  <t-input @keydown.enter="addEl()" v-model="input"></t-input>
+                  <t-input
+                    @keydown.enter="addEl"
+                    @input="handleChange"
+                    v-model="input">
+                  </t-input>
                 </t-grid-cell>
                 <t-grid-cell span="6" justify="end">
-                  <t-toggle @change="toggleThings()"></t-toggle>
+                  <t-toggle @change="toggleThings"></t-toggle>
                 </t-grid-cell>
               </t-grid-row>
               <t-grid-row>
                 <t-grid-cell span="12" justify="end">
                   <t-button-group>
-                    <t-button @click="addEl()">Add</t-button>
-                    <t-button theme="secondary" @click="clearEl()">Empty</t-button>
+                    <t-button @click="addEl">Add</t-button>
+                    <t-button theme="secondary" @click="clearEl">Empty</t-button>
                   </t-button-group>
                 </t-grid-cell>
               </t-grid-row>
@@ -30,17 +34,17 @@
     <t-grid-row v-if="toggleValue">
       <t-grid-cell span="4">
         <t-card>
-          <div v-for="el in elementList" :key="JSON.stringify(el)">{{ el }}</div>
+          <div v-for="(el, index) in elementList" v-bind:key="index">{{ el }}</div>
         </t-card>
       </t-grid-cell>
       <t-grid-cell span="4">
         <t-card>
-          <div v-for="el in elementList" :key="JSON.stringify(el)">{{ el }}</div>
+          <div v-for="(el, index) in elementList" v-bind:key="index">{{ el }}</div>
         </t-card>
       </t-grid-cell>
       <t-grid-cell span="4">
         <t-card>
-          <div v-for="el in elementList" :key="JSON.stringify(el)">{{ el }}</div>
+          <div v-for="(el, index) in elementList" v-bind:key="index">{{ el }}</div>
         </t-card>
       </t-grid-cell>
     </t-grid-row>
@@ -120,9 +124,9 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class HelloWorld extends Vue {
   public input = '';
 
-  public toggleValue = 'false';
+  public toggleValue: boolean | string = false;
 
-  public elementsList: string[] = [];
+  public elementList: string[] = [];
 
   public handleChange(e: Event) {
     const { value } = e.target as HTMLInputElement;
@@ -134,16 +138,25 @@ export default class HelloWorld extends Vue {
     this.toggleValue = value;
   }
 
-  public addElement() {
-    this.elementsList = [...this.elementsList, this.input];
-    this.input = '';
+  public addEl() {
+    this.elementList = [...this.elementList, this.input];
   }
 
-  public clearElements() {
-    this.elementsList = [];
+  public clearEl() {
+    this.elementList = [];
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style lang="scss">
+
+html {
+  background-color: #ECF0F2;
+  min-height: 100vh;
+}
+body {
+
+}
+
+</style>
