@@ -1,0 +1,149 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { html } from "lit-html";
+import "./t-grid.ts";
+import "../t-grid-row/t-grid-row.ts";
+import "../t-grid-cell/t-grid-cell.ts";
+
+<Meta title="Building Blocks|Grid" component="t-grid" />
+
+# Card
+
+<Preview>
+  <Story name="Base">
+    {() => html`
+      <div style="background-color:#ECF0F2; padding: 16px;">
+        <t-grid>
+          <t-grid-row>
+            <t-grid-cell span="12">
+              <t-card><h3 slot="t-card-head">12</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="6">
+              <t-card><h3 slot="t-card-head">6</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="6">
+              <t-card><h3 slot="t-card-head">6</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="4">
+              <t-card><h3 slot="t-card-head">4</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="4">
+              <t-card><h3 slot="t-card-head">4</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="4">
+              <t-card><h3 slot="t-card-head">4</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="12">
+              <t-card><h3 slot="t-card-head">12</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="6">
+              <t-card><h3 slot="t-card-head">6</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="6">
+              <t-card><h3 slot="t-card-head">6</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+        </t-grid>
+      </div>
+    `}
+  </Story>
+</Preview>
