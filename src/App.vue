@@ -11,7 +11,8 @@
                   <t-input
                     @keydown.enter="addEl"
                     @input="handleChange"
-                    v-model="input">
+                    :inputValue="input"
+                  >
                   </t-input>
                 </t-grid-cell>
                 <t-grid-cell span="6" justify="end">
@@ -140,6 +141,7 @@ export default class HelloWorld extends Vue {
 
   public addEl() {
     this.elementList = [...this.elementList, this.input];
+    this.input = '';
   }
 
   public clearEl() {
