@@ -1,7 +1,7 @@
 <template>
   <t-grid>
     <t-grid-row>
-      <t-grid-cell span="2">
+      <t-grid-cell span="8">
         <t-card>
           <h3 slot="t-card-head">Vue + web components</h3>
           <form>
