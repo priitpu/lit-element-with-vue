@@ -148,15 +148,11 @@ export default class HelloWorld extends Vue {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 
 html {
   background-color: #ECF0F2;
   min-height: 100vh;
-}
-body {
-
 }
 
 </style>
